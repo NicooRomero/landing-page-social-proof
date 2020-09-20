@@ -1,0 +1,142 @@
+:root {
+    --primario: hsl(300, 43%, 22%);
+    --secundario:hsl(333, 80%, 67%);
+    --fuentePrimaria: 'Spartan', sans-serif;
+    --darkmg:hsl(303, 10%, 53%);
+    --lightmg: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    background: url(/images/bg-pattern-top-desktop.svg)  top left no-repeat,
+    url(/images/bg-pattern-bottom-desktop.svg)  bottom right no-repeat;
+    background-attachment: fixed;
+    font-size: 15px;
+    font-family: var(--fuentePrimaria);
+    max-width: 100%;
+    height: 100%;
+}
+
+.contenedor {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titulo h1 {
+    color: var(--primario);
+    font-weight: 700;
+    font-size: 50px;
+    max-width: 60%;
+    margin: 0 auto;
+}
+.subtitulo {
+    color: var(--darkmg);
+    max-width: 60%;
+    margin: 20px auto;
+    line-height: 25px;
+}
+
+.rated {
+    background-color: var(--lightmg);
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    width: 500px;
+    margin-bottom: 20px;
+    align-items: center;
+    padding: 5px;
+}
+
+.rated p {
+    font-weight: 700;
+    color: var(--primario);
+}
+
+.rated img {
+    margin-right: 5px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 100px;
+}
+
+.testimonio {
+    background-color: var(--primario);
+    width: 340px;
+    padding: 30px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 180px;
+}
+
+.testimonio img {
+    border-radius: 40px;
+    width: 50px;
+}
+
+.name {
+    color: var(--white);
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.subname {
+    color: var(--secundario);
+    margin-top: 5px;
+}
+
+.testi {
+    color: var(--lightmg);
+    line-height: 23px;
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 25% 50%;
+}
+
+
+/* media query */
+
+@media (max-width:1341px) {
+    .grid1 {
+        display: grid;
+        grid-template-columns: none;
+        margin-top: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .rated {
+        margin-left: auto!important;
+        margin-right: auto!important;
+        align-content: center;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: none;
+        margin-top: 100px;
+    }
+
+    .testimonio {
+        margin-right: auto!important;
+        margin-left: auto!important;
+    }
+
+    .attribution {
+        position: relative!important;
+        top: 20px;
+    }
+}
